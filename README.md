@@ -4,6 +4,12 @@ A plugin for [Jellyfin](https://jellyfin.org/docs/) to automatically skip chapte
 
 Tested on [Jellyfin Web](https://github.com/jellyfin/jellyfin-web), [Jellyfin Android TV](https://github.com/jellyfin/jellyfin-androidtv) and [Jellyfin Android](https://github.com/jellyfin/jellyfin-android) clients
 
+## Features
+
+* Automatically skip 1 or more chapters in series with a name matching a regular expression
+* Allows the user to manually seek backwards on a video to watch a previously skipped chapter, the plugin will only resume skipping chapters after playback returns to a previously unwatched position
+* Stops video playback if all remaining chapters are to be skipped
+
 ## Installation
 
 Add a new plugin repository to Jellyfin and use https://github.com/elmuffo/jellyfin-auto-chapter-skip/blob/master/manifest.json for the Repository URL, then install Auto Chapter Skip on the Catalog tab and restart Jellyfin to complete the process
@@ -18,12 +24,6 @@ Navigate to the plugin settings and configure a regular expression to match on. 
     * Skip all chapters that contain the word Intro
 * Match: `\[SponsorBlock\]: Sponsor`
     * Skip chapters that are Sponsor segments as marked by SponsorBlock
-
-## Features
-
-* Automatically skip 1 or more chapters in series with a name matching a regular expression
-* Allows the user to manually seek backwards on a video to watch a previously skipped chapter, the plugin will only resume skipping chapters after playback returns to a previously unwatched position
-* Stops video playback if all remaining chapters are to be skipped
 
 ## FAQ
 
