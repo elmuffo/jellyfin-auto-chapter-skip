@@ -1,0 +1,17 @@
+---
+name: "Auto Chapter Skip"
+guid: "246b4b7a-2e91-4ec6-8478-215be18bc01d"
+version: 0
+targetAbi: "10.8.0.0"
+framework: "net6.0"
+overview: "Auto skip chapters based on regex matching name"
+description: >
+  Auto skip chapters based on regex matching name
+
+category: "General"
+owner: "elmuffo"
+artifacts:
+  - "Elmuffo.Plugin.AutoChapterSkip.dll"
+changelog: >
+  changelog
+
