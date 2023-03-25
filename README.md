@@ -8,7 +8,7 @@ Tested on [Jellyfin Web](https://github.com/jellyfin/jellyfin-web), [Jellyfin An
 
 * Automatically skip 1 or more chapters in series with a name matching a regular expression
 * Allows the user to manually seek backwards on a video to watch a previously skipped chapter, the plugin will only resume skipping chapters after playback returns to a previously unwatched position
-* Stops video playback if all remaining chapters are to be skipped
+* Stops video playback if all remaining chapters are to be skipped and marks the video as watched
 
 ## Installation
 
