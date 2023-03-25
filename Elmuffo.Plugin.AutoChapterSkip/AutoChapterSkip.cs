@@ -83,7 +83,7 @@ namespace Elmuffo.Plugin.AutoChapterSkip
 
             if (nextChapterTicks == null)
             {
-                if (!remainingChapters.Any())
+                if (!remainingChapters.Any(c => !regex.IsMatch(c.Name)))
                 {
                     send(PlaystateCommand.Stop, null);
                 }
