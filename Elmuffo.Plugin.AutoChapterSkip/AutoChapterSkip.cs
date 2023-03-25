@@ -61,7 +61,7 @@ namespace Elmuffo.Plugin.AutoChapterSkip
                 return;
             }
 
-            var send = (PlaystateCommand command, long? ticks) =>
+            var send = (long? ticks) =>
             {
                 Lock(() => _currentPositions[e.Session.Id] = ticks);
 
@@ -70,7 +70,7 @@ namespace Elmuffo.Plugin.AutoChapterSkip
                    e.Session.Id,
                    new PlaystateRequest
                    {
-                       Command = command,
+                       Command = PlaystateCommand.Seek,
                        ControllingUserId = e.Session.UserId.ToString("N"),
                        SeekPositionTicks = ticks
                    },
@@ -85,7 +85,7 @@ namespace Elmuffo.Plugin.AutoChapterSkip
             {
                 if (!remainingChapters.Any(c => !regex.IsMatch(c.Name)))
                 {
-                    send(PlaystateCommand.Stop, null);
+                    send(e.Item.RunTimeTicks);
                 }
 
                 return;
@@ -100,7 +100,7 @@ namespace Elmuffo.Plugin.AutoChapterSkip
                 return;
             }
 
-            send(PlaystateCommand.Seek, nextChapterTicks);
+            send(nextChapterTicks);
         }
 
         private void SessionManager_PlaybackStopped(object? sender, PlaybackStopEventArgs e)
