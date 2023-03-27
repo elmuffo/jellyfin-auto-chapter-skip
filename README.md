@@ -8,7 +8,7 @@ A plugin for [Jellyfin](https://jellyfin.org/docs/) to automatically skip chapte
 * Allows the user to manually seek backwards on a video to watch a previously skipped chapter, the plugin will only resume skipping chapters after playback returns to a previously unwatched position
 * Stops video playback if all remaining chapters are to be skipped and marks the video as watched
 
-## Supported Clients:
+## Supported Clients
 * [Jellyfin Web](https://github.com/jellyfin/jellyfin-web)
 * [Jellyfin Android TV](https://github.com/jellyfin/jellyfin-androidtv)
 * [Jellyfin Android](https://github.com/jellyfin/jellyfin-android)
